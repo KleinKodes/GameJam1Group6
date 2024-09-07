@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Temporary user assets
 /[Aa]ssets/Ignored/*
+
+# Unnecessary.meta files
+/[Aa]seets/*.meta
