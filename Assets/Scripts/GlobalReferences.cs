@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class GlobalReferences : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private static SFXManager sfxManager;
+   public static SFXManager SFXMANAGER {  get { return sfxManager; } set { sfxManager = value; } }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
