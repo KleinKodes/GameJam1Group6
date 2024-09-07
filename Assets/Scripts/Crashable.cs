@@ -10,12 +10,13 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Tags.DEATH))
         {
-            //TODO: add call to player death function in player controller if it exists
 
             //spawn explosion particle
-            Instantiate(particleEffect, gameObject.transform);
+            Instantiate(particleEffect, gameObject.transform.position, Quaternion.identity);
             //TODO: figure out if 100 works
             GlobalReferences.SFXMANAGER.PlaySoundFXClip(crashSfx, gameObject.transform, 100);
+            //TODO: add call to player death function in player controller if it exists
+            gameObject.GetComponent<CarController>().die();
             GlobalEvents.PlayerDeath.invoke();
             
         }
